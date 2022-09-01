@@ -18,10 +18,10 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  addToFav(id: number)
-  {
-    this.favoriteservice.addtofavorites(id).subscribe(( data => {this.addedtofav=true;}))
-  }
+  // addToFav(id: number)
+  // {
+  //   this.favoriteservice.addtofavorites(id).subscribe(( data => {this.addedtofav=true;}))
+  // }
   // fillfav(){
   //   this.b.isFav = !this.addedtofav;
   // }

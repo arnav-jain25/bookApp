@@ -24,7 +24,20 @@
                         <td>{{book.pdate}}</td>
                         <td>{{book.pname}}</td>
                         <td>{{book.lang}}</td>
-                        <td>{{book.bimg}}</td>
+                        <td>
+                            <!-- <button (click)="book.isFav=!book.isFav" style="border: 0px; background-color: bisque;"></button> -->
+                            <button (click)="addToFavourites(1,book.id)" style="border: 0px; background-color: bisque;">
+                                &nbsp;
+                                <i class="bi-heart" *ngIf="book.isFav; then addFill else removeFill">
+                                </i> &nbsp;
+                                <ng-template #addFill>
+                                  <i class="bi-heart-fill"></i>
+                                </ng-template>
+                                <ng-template #removeFill>
+                                  <i class="bi-heart"></i>
+                                </ng-template>
+                            </button>
+                        </td>
                     </tr>
                 </tbody>
             </table>

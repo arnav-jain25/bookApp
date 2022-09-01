@@ -5,5 +5,5 @@ export interface Books {
     "pdate": string,
     "pname": string,
     "lang": string,
-    "bimg": string
+    "isFav": boolean
 }

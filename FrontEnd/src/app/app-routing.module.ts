@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'about', component: AboutComponent },
   { path: 'library', component: LibraryComponent },
-  { path: 'favourites', component: FavouritesComponent },
+  { path: 'favourites/:userId/:bookId', component: FavouritesComponent },
   { path: 'recommendations', component: RecommendationsComponent },
   { path: 'authors', component: AuthorsComponent },
   { path: 'my-profile', component: MyProfileComponent }
