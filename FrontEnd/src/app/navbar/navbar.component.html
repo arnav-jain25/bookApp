@@ -1,0 +1,79 @@
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+
+<nav class="navbar navbar-expand-lg" style="background-color: rgb(219, 169, 105); text-align: center; ">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="/dashboard">
+            <img src="favicon.ico" alt="" width="30" height="24">
+        </a>
+        <a class="navbar-brand" routerLink="/dashboard">XYZ</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/library">Library
+                        <i class="bi-book-half"></i> 
+                    </a>
+                </li>&nbsp;&nbsp;
+                <!-- <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/wishlist">Wish List
+                        <i class="bi-bookmark-check-fill"></i>
+                    </a>
+                </li>&nbsp;&nbsp; -->
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/favourites">Favorites
+                        <i class="bi-heart-fill"></i>
+                    </a>
+                </li>&nbsp;&nbsp;
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/recommendations">Recommendations
+                        <i class="bi-check-circle-fill"></i>
+                    </a>
+                </li>&nbsp;&nbsp;
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/authors">Authors
+                        <i class="bi-person-circle"></i>
+                    </a>
+                </li>&nbsp;&nbsp;
+            </ul>
+            <form class="d-flex" role="search" style="padding-right: 10%;" >
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn" type="submit">
+                    <i class="bi-search"></i>
+                </button>
+            </form>
+            <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="bi-list"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="#">Action</a></li>
+                        <li><a class="dropdown-item" routerLink="#">Another action</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" routerLink="#">Something else here</a></li>
+                    </ul>
+                </li>
+            </ul> -->
+
+            <div class="dropdown" style="padding-right: 10%;">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: rgb(94, 17, 17);">
+                  <i class="bi-list"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" routerLink="/my-profile">My Profile</a></li>
+                  <li><a class="dropdown-item" routerLink="/about">About XYZ</a></li>
+                  <li><a class="dropdown-item" routerLink="/">LogOut</a></li>
+                </ul>
+              </div>
+          
+        </div>
+    </div>
+</nav>

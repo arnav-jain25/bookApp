@@ -1,0 +1,28 @@
+body {
+    background-color: bisque;
+    text-align: center;
+}
+
+h1 {
+    color: rgb(81, 20, 20);
+}
+
+h5 {
+    color: rgb(208, 56, 29);
+}
+
+.btnEdit {
+    background-color: rgb(81, 20, 20);
+    border: 0px;
+    color: lightgoldenrodyellow;
+    padding: 1%;
+    border-radius: 5px;
+}
+
+.btnEdit:hover {
+    background-color: lightgoldenrodyellow;
+    border: 0px;
+    color: rgb(81, 20, 20);
+    padding: 1%;
+    border-radius: 5px;
+}

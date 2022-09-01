@@ -1,0 +1,15 @@
+<body>
+    <app-navbar></app-navbar>
+    <div class="divider"><span></span><span>Authors</span><span></span></div>
+    <div class="container">
+        <div class="row">
+            <ul *ngFor="let book of bookData;">
+                <li>{{book.aname}}</li>
+            </ul>
+        </div>
+        <br>
+    </div>
+    <br><br>
+
+    <app-footer></app-footer>
+</body>

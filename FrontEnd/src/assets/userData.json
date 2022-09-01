@@ -1,0 +1,39 @@
+{
+    "user": [
+        {
+            "id": 1,
+            "name": "Tony Stark",
+            "email": "tony@email.com",
+            "password": "qwerty",
+            "phone": 9988776655
+        },
+        {
+            "id": 2,
+            "name": "Steve Rogers",
+            "email": "steve@email.com",
+            "password": "qwerty",
+            "phone": 9988774455
+        },
+        {
+            "id": 3,
+            "name": "Bruce Banner",
+            "email": "bruce@email.com",
+            "password": "qwerty",
+            "phone": 9988776611
+        },
+        {
+            "id": 4,
+            "name": "Thanos",
+            "email": "thanos@email.com",
+            "password": "qwerty",
+            "phone": 9988776655
+        },
+        {
+            "id": 5,
+            "name": "Thor",
+            "email": "thor@email.com",
+            "password": "qwerty",
+            "phone": 9988776655
+        }
+    ]
+}

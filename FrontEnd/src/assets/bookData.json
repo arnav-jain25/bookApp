@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Harry Potter and the Philosopher's Stone",
+      "author": "J.K Rowling",
+      "rating": 4.8
+    },
+    {
+      "id": 4,
+      "title": "Harry Potter and the Goblet of Fire",
+      "author": "J.K Rowling",
+      "rating": 4.8
+    },
+    {
+      "id": 5,
+      "title": "Harry Potter and the Order of Phoenix",
+      "author": "J.K Rowling",
+      "rating": 4.8
+    },
+    {
+      "id": 6,
+      "title": "Harry Potter and the Half Blood Prince",
+      "author": "J.K Rowling",
+      "rating": 4.8
+    }
+  ]
+}

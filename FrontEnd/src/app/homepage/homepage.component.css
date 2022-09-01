@@ -1,0 +1,91 @@
+.container {
+    text-align: center;
+    padding: 5%;
+}
+
+body {
+    background-color: bisque;
+}
+
+.heading {
+    margin-top: 3%;
+
+}
+
+.button {
+    margin-top: 1%;
+}
+
+.btn {
+    background-color: rgb(139, 158, 14);
+    color: whitesmoke;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 10ch;
+    color: rgb(89, 49, 1);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+h2,
+h5 {
+    color: rgb(225, 123, 7);
+    font-family:serif
+}
+/* ----------------------------------------Divider---------------------------- */
+
+.divider {
+    /* minor cosmetics */
+    display: table;
+    font-size: 24px;
+    text-align: center;
+    width: 75%;
+    /* divider width */
+    margin: 40px auto;
+    /* spacing above/below */
+}
+
+.divider span {
+    display: table-cell;
+    position: relative;
+}
+
+.divider span:first-child,
+.divider span:last-child {
+    width: 50%;
+    top: 20px;
+    /* adjust vertical align */
+    -moz-background-size: 100% 2px;
+    /* line width */
+    background-size: 100% 2px;
+    /* line width */
+    /* background-position: 0 0, 0 100%; */
+    background-repeat: no-repeat;
+}
+
+.divider span:first-child {
+    /* color changes in here */
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(rgb(215, 0, 0)));
+    background-image: -webkit-linear-gradient(180deg, transparent, rgb(15, 227, 255));
+    background-image: -moz-linear-gradient(180deg, transparent, rgb(11, 106, 46));
+    background-image: -o-linear-gradient(180deg, transparent, rgb(202, 185, 32));
+    background-image: linear-gradient(90deg, transparent, rgb(211, 100, 20));
+}
+
+.divider span:nth-child(2) {
+    color: rgb(139, 158, 14);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0px 5px;
+    width: auto;
+    white-space: nowrap;
+}
+
+.divider span:last-child {
+    /* color changes in here */
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(215, 0, 0)), to(transparent));
+    background-image: -webkit-linear-gradient(180deg, rgb(15, 227, 255), transparent);
+    background-image: -moz-linear-gradient(180deg, rgb(11, 106, 46), transparent);
+    background-image: -o-linear-gradient(180deg, rgb(202, 185, 32), transparent);
+    background-image: linear-gradient(90deg, rgb(211, 100, 20), transparent);
+}

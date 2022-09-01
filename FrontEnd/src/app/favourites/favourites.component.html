@@ -1,0 +1,39 @@
+<body>
+    <app-navbar></app-navbar>
+    <div class="divider"><span></span><span>Favourites</span><span></span></div>
+    <div class="container">
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Book ID</th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Published Date</th>
+                        <th>Publisher Name</th>
+                        <th>Language</th>
+                        <th>Book Image</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let book of bookData;">
+                        <td>{{book.id}}</td>
+                        <td>{{book.bname}}</td>
+                        <td>{{book.aname}}</td>
+                        <td>{{book.pdate}}</td>
+                        <td>{{book.pname}}</td>
+                        <td>{{book.lang}}</td>
+                        <td>{{book.bimg}}</td>
+                        <td><input type="button" value="Delete from Database" (click)="delete(book.id,book.id)"></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+        <br>
+    </div>
+    <br><br>
+    
+    <app-footer></app-footer>
+</body>

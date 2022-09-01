@@ -1,0 +1,145 @@
+<body>
+
+  <app-navbar></app-navbar>
+
+  <div class="container">
+    <!-- <h2 style="padding-bottom: 3%; padding-top: 3%;">- Library -</h2><br> -->
+    <div class="divider"><span></span><span>Library</span><span></span></div>
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col" *ngFor="let books of b; let ind=index">
+            <div class="card h-100 w-20" style="background-color:beige">
+              <div class="card-body">
+                <img src="https://i.pinimg.com/originals/e7/08/69/e708697043f1a3b4d2d242c9f554f24e.jpg"
+                  style="width : 100px; height : 150px; border: 3.5px solid rgb(135, 20, 0);" class="card-img-top"
+                  alt="...">
+                <h5 class="card-title">{{books.title}}</h5>
+                <br>
+                <h6>Rating: {{books.rating}}</h6>
+                <h6>Authors: {{books.author}}</h6>
+
+                <!-- <a href=""><input type="button" value="Read More" class="readmore"></a>&nbsp; -->
+                <!-- <button (click)="fillfav()" style="border: 0px; background-color: beige;"> -->
+                  <!-- <i class="bi-heart" *ngIf="isFav; then addFill else removeFill"> -->
+                  <!-- </i> &nbsp; -->
+                  <!-- <ng-template #addFill> -->
+                    <!-- <i class="bi-heart-fill"></i> -->
+                  <!-- </ng-template> -->
+                  <!-- <ng-template #removeFill> -->
+                    <!-- <i class="bi-heart"></i> -->
+                  <!-- </ng-template> -->
+                <!-- </button> -->
+                <i *ngIf="addedtofav" class="far fa-heart floaat-right" (click)="addToFav(books.id)" style="cursor: pointer ;"></i>
+                <i *ngIf="!addedtofav" class="fas fa-heart floaat-right" style="cursor: pointer ;"></i>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <a href="/library" style="text-align: right;">See More Books</a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- <h2 style="padding-bottom: 3%; padding-top: 3%;">- Favourites -</h2> -->
+    <div class="divider"><span></span><span>Favourites</span><span></span></div>
+    <div class="row">
+      <div class="col" *ngFor="let books of b; let ind=index">
+        <div class="card h-100 w-20" style="background-color:rgb(227, 220, 245)">
+          <div class="card-body">
+            <img src="https://i.pinimg.com/originals/e7/08/69/e708697043f1a3b4d2d242c9f554f24e.jpg"
+              style="width : 100px; height : 150px; border: 3.5px solid rgb(135, 20, 0);" class="card-img-top"
+              alt="...">
+            <h5 class="card-title">{{books.title}}</h5>
+            <br>
+            <h6>Rating: {{books.rating}}</h6>
+            <h6>Authors: {{books.author}}</h6>
+
+            <a href=""><input type="button" value="Read More" class="readmore"></a>&nbsp;
+            <button (click)="books.isFav=!books.isFav" style="border: 0px; background-color: rgb(227, 220, 245);">
+              <i class="bi-heart" *ngIf="books.isFav; then addFill else removeFill">
+              </i> &nbsp;
+              <ng-template #addFill>
+                <i class="bi-heart-fill"></i>
+              </ng-template>
+              <ng-template #removeFill>
+                <i class="bi-heart"></i>
+              </ng-template>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+        <div class="row">
+          <a href="/favourites" style="text-align: right;">See More Books</a>
+        </div>
+    <br><br>
+
+    <!-- <h2 style="padding-bottom: 3%; padding-top: 3%;">- Recommendations -</h2> -->
+    <div class="divider"><span></span><span>Recommendations</span><span></span></div>
+    <div class="row">
+      <div class="col" *ngFor="let books of b; let ind=index">
+        <div class="card h-100 w-20" style="background-color:rgb(245, 220, 220)">
+          <div class="card-body">
+            <img src="https://i.pinimg.com/originals/e7/08/69/e708697043f1a3b4d2d242c9f554f24e.jpg"
+              style="width : 100px; height : 150px; border: 3.5px solid rgb(135, 20, 0);" class="card-img-top"
+              alt="...">
+            <h5 class="card-title">{{books.title}}</h5>
+            <br>
+            <h6>Rating: {{books.rating}}</h6>
+            <h6>Authors: {{books.author}}</h6>
+
+            <a href=""><input type="button" value="Read More" class="readmore"></a>&nbsp;
+            <!-- <button (click)="fillfav()" style="border: 0px; background-color: rgb(245, 220, 220);"> -->
+              <!-- <i class="bi-heart" *ngIf="isFav; then addFill else removeFill"> -->
+              <!-- </i> &nbsp; -->
+              <ng-template #addFill>
+                <i class="bi-heart-fill"></i>
+              </ng-template>
+              <ng-template #removeFill>
+                <i class="bi-heart"></i>
+              </ng-template>
+            <!-- </button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+        <div class="row">
+          <a href="/recommendations" style="text-align: right;">See More Books</a>
+        </div>
+    <br><br>
+
+    <!-- <h2 style="padding-bottom: 3%; padding-top: 3%;">- Authors -</h2><br> <br> -->
+    <div class="divider"><span></span><span>Authors</span><span></span></div>
+    <div class="row">
+      <div class="col" *ngFor="let a of auth; let index=index">
+        <div class="card h-100 w-20" style="background-color:rgb(169, 205, 184)">
+          <div class="card-body">
+            <img src="https://i.pinimg.com/originals/e7/08/69/e708697043f1a3b4d2d242c9f554f24e.jpg"
+              style="width : 200px; height : 200px; border-radius: 100%; border: 5px solid rgb(135, 20, 0);"
+              class="card-img-top" alt="...">
+            <br><br>
+            <h5 class="card-title">{{a.authorName}}</h5>
+            <br>
+            <a href=""><input type="button" value="Read More" class="readmore"></a>
+            <br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+        <div class="row">
+          <a href="/authors" style="text-align: right;">See More Authors</a>
+        </div>
+    <br><br><br><br>
+  </div>
+
+  <app-footer></app-footer>
+</body>

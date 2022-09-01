@@ -1,0 +1,25 @@
+<body>
+    <app-navbar></app-navbar>
+    <br><br><br><br>
+
+    <div class="container" style="width: 80%; background-color: rgba(77, 38, 7, 0.4); padding-top: 3%; box-shadow: 0 0 10px 5px rgba(77, 30, 30, 0.2)">
+            <h1>My Profile</h1>
+            <br>
+                <h5 style="display: inline-block;">Name - &nbsp; &nbsp; </h5> 
+                <h5 style="display: inline-block;">{{userData.name}}</h5><br>
+                
+                <h5 style="display: inline-block;">Email ID - &nbsp; &nbsp; </h5> 
+                <h5 style="display: inline-block;">{{userData.email}}</h5><br>
+
+                <h5 style="display: inline-block;">Password - &nbsp; &nbsp; </h5> 
+                <h5 style="display: inline-block;">{{userData.password}}</h5><br>
+
+                <h5 style="display: inline-block;">Phone Number - &nbsp; &nbsp; </h5> 
+                <h5 style="display: inline-block;">{{userData.phone}}</h5><br>
+                <br><br>
+                <input type="button" value="Edit Profile" class="btnEdit" (click)="editData(userData)"><br><br>
+        <br><br><br>
+    </div>
+    <br><br>
+    <app-footer></app-footer>
+</body>
