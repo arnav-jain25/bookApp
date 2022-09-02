@@ -9,5 +9,6 @@ import com.BookApp.Backend.model.Books;
 public interface BooksRepository extends JpaRepository <Books,Long> {
 	
 	public List<Books> findAllByaName(String aname);
+	public List<Books> findBybNameContaining(String bName);
 
 }

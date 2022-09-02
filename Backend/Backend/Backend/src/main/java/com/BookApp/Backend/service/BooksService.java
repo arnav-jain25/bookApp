@@ -52,4 +52,8 @@ public class BooksService {
     public List<Books> getAllBooksByAuthorName(String aname){
         return booksRepository.findAllByaName(aname);
     }
+    
+    public List<Books> searchBook(String keywords){
+    	return booksRepository.findBybNameContaining(keywords);
+    }
 }

@@ -52,15 +52,10 @@ public class Books {
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "book")
     private List<Favourites> favourite;
     
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="book_id")
-    private Authors authors;
+//    @ManyToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name="A_id")
+//    private Authors authors;
    
-    public Books(String bName, String aName) {
-        super();
-        this.bName = bName;
-        this.aName = aName;
-    }
-
+    
 
 }

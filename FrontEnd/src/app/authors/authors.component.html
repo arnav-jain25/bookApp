@@ -3,12 +3,19 @@
     <div class="divider"><span></span><span>Authors</span><span></span></div>
     <div class="container">
         <div class="row">
-            <ul *ngFor="let book of bookData;">
-                <li>{{book.aname}}</li>
-                <li>{{book.bname}}</li>
+            <ul *ngFor="let a of uniqueAuthor">
+                <li>{{a}}</li>
+                <div *ngFor="let book of bookData">
+                    <div *ngIf="a==book.aname">
+                        <li>
+                            {{book.bname}}
+                        </li>
+                    </div>
+                </div>
             </ul>
         </div>
         <br>
+   
     </div>
     <br><br>
 

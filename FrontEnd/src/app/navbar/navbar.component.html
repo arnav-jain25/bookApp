@@ -40,9 +40,9 @@
                     </a>
                 </li>&nbsp;&nbsp;
             </ul>
-            <form class="d-flex" role="search" style="padding-right: 10%;" >
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn" type="submit">
+            <form class="d-flex" role="search" style="padding-right: 10%;" (ngSubmit)="OnSubmit()" >
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="search" name="search">
+                <button class="btn" type="submit" (click)="OnSubmit()">
                     <i class="bi-search"></i>
                 </button>
             </form>
@@ -77,3 +77,35 @@
         </div>
     </div>
 </nav>
+
+<div *ngIf="isVisible">
+    <div class="divider"><span></span><span>Your Search Results</span><span></span></div>
+    <div class="row">
+      <div class="col" *ngFor="let books of bookData; let ind=index">
+        <div class="card" style="background-color:rgb(227, 220, 245); height: auto; width: auto;">
+          <div class="card-body">
+            <img src="https://i.pinimg.com/originals/e7/08/69/e708697043f1a3b4d2d242c9f554f24e.jpg"
+              style="width : 100px; height : 150px; border: 3.5px solid rgb(135, 20, 0);" class="card-img-top"
+              alt="...">
+            <h5 class="card-title">{{books.bname}}</h5>
+            <br>
+            <h6>Authors: {{books.aname}}</h6>
+            <!-- <h6>Authors: {{books.author}}</h6> -->
+
+            <a href=""><input type="button" value="Read More" class="readmore"></a>&nbsp;
+            <button (click)="books.isFav=!books.isFav" style="border: 0px; background-color: rgb(227, 220, 245);">
+              <i class="bi-heart" *ngIf="books.isFav; then addFill else removeFill">
+              </i> &nbsp;
+              <ng-template #addFill>
+                <i class="bi-heart-fill"></i>
+              </ng-template>
+              <ng-template #removeFill>
+                <i class="bi-heart"></i>
+              </ng-template>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button (click)="isVisible=false">Revert to Dashboard</button>
+</div>

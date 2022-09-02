@@ -59,8 +59,13 @@ public class BooksController {
 
     }
     
-    @GetMapping("/Books/AuthorName/{aname}")
-    public List<Books> getAllBooksByAuthor(@PathVariable String aname){
-        return booksService.getAllBooksByAuthorName(aname);
+    @GetMapping("/Books/AuthorName/{author}")
+    public List<Books> getAllBooksByAuthor(@PathVariable String author){
+        return booksService.getAllBooksByAuthorName(author);
+    }
+    
+    @GetMapping("/Books/search/{keywords}")
+    public List<Books> searchBooks(@PathVariable String keywords){
+        return booksService.searchBook(keywords);
     }
 }
