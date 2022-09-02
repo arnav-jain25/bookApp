@@ -48,4 +48,8 @@ public class BooksService {
         return "Book Successfully deleted from Database";
 
     }
+    
+    public List<Books> getAllBooksByAuthorName(String aname){
+        return booksRepository.findAllByaName(aname);
+    }
 }

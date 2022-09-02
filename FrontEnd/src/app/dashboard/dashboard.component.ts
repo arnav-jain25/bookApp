@@ -27,7 +27,7 @@ export class DashboardComponent implements OnInit {
   // }
   removeFromFav(id: number)
   {
-    this.favoriteservice.removefromfavorites(id).subscribe((data => {this.addedtofav=false;}))
+    // this.favoriteservice.removefromfavorites(id).subscribe((data => {this.addedtofav=false;}))
   }
   
 

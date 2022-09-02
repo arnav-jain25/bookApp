@@ -21,6 +21,7 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
 import { FormsModule } from '@angular/forms';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

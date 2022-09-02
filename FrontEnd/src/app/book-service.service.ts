@@ -23,4 +23,8 @@ export class BookServiceService {
   getbookDataByIdAPI(BookId:number): Observable<Books> {
     return this.httpClient.get<Books>(`${this.dataUrl}/${BookId}`)
   }
+
+  getbookDataByAuthorAPI(aName:String): Observable<Books[]> {
+    return this.httpClient.get<Books[]>(`${this.dataUrl}/Books/AuthorName/${aName}`);
+  }
 }

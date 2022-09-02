@@ -15,6 +15,12 @@ export class AuthorsComponent implements OnInit {
 
   ngOnInit(): void {
     this.bookService.getbookDataAPI().subscribe(data => this.bookData = data)
+    this.getBookByAuthor(this.bookData[1].aname);
+  }
+
+  getBookByAuthor(aName:String)
+  {
+    this.bookService.getbookDataByAuthorAPI(aName).subscribe(data => this.bookData = data)
   }
 
 }

@@ -8,19 +8,20 @@ import { Favourites } from './Favourites';
   providedIn: 'root'
 })
 export class FavoriteService {
-  favURL = 'http://localhost:8080/favourites';
+  
+  // favURL = 'http://localhost:8080/favourites';
 
-  constructor(private httpclient : HttpClient, favourite:Favourites) { }
+  // constructor(private httpclient : HttpClient, fav:Favourites) { }
 
-  addtofavoritesService(userId:number,bookId:number): Observable<Favourites> 
-  {
-    console.log(Favourites);
-    return this.httpclient.post<Favourites>(`${this.favURL}/user/1/books/${bookId}`,Favourites);
+  // addtofavoritesService(userId:number,bookId:number): Observable<Favourites> 
+  // {
+  //   console.log(this.httpclient.get<Favourites[]>(`${this.favURL}`));
+  //   return this.httpclient.post<Favourites>(`${this.favURL}/user/1/books/${bookId}`,this.httpclient.get<Favourites[]>(`${this.favURL}`));
 
-  }
+  // }
   removefromfavorites(bookid:any)
   {
-    return this.httpclient.delete(this.favURL + '/' + bookid)
+    // return this.httpclient.delete(this.favURL + '/' + bookid)
   }
 }
 

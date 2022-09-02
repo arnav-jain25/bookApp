@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -49,6 +51,10 @@ public class Books {
     @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "book")
     private List<Favourites> favourite;
+    
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="book_id")
+    private Authors authors;
    
     public Books(String bName, String aName) {
         super();

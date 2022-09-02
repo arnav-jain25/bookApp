@@ -28,13 +28,13 @@ export class LibraryComponent implements OnInit {
     });
   }
 
-  addToFavourites(userId:number, bookId:number)
-  {
-    this.favourtieService.addtofavoritesService(userId,bookId).subscribe(
-      data => {console.log(data)}
-    );
-    console.log("addToFavourites")
-    this.router.navigate(['favourites',userId ,bookId])
-  }
+  // addToFavourites(userId:number, bookId:number)
+  // {
+  //   this.favourtieService.addtofavoritesService(userId,bookId).subscribe(
+  //     data => {console.log(data)}
+  //   );
+  //   console.log("addToFavourites")
+  //   this.router.navigate(['favourites',userId ,bookId])
+  // }
  
 }
