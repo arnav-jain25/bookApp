@@ -72,9 +72,9 @@
                     <i class="bi-list"></i>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" routerLink="/my-profile">My Profile</a></li>
+                    <li><a class="dropdown-item" routerLink="/my-profile" (click)="goToProfile()">My Profile</a></li>
                     <li><a class="dropdown-item" routerLink="/about">About XYZ</a></li>
-                    <li><a class="dropdown-item" routerLink="/">LogOut</a></li>
+                    <li><a class="dropdown-item" routerLink="/" (click)="LogoutUser()">LogOut</a></li>
                 </ul>
             </div>
 

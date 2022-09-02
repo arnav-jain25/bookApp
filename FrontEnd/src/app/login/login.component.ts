@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../user-service.service';
+import { UserLogin } from '../UserLogin';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService:UserService) { }
+
+  userLogin:UserLogin=new UserLogin();
+
+  jsonStringObj:any;
+
 
   ngOnInit(): void {
   }
+
+  OnSubmit(){
+    console.log(this.userLogin)
+    this.login()
+  }
+  login() {
+
+    return this.userService.postLoginAPI(this.userLogin).subscribe(
+      (data:any) => {
+        console.log('user created');
+        console.log(data);
+        //Storing user in session storage
+        sessionStorage.setItem("user", JSON.stringify(data));
+        this.jsonStringObj = sessionStorage.getItem('user');
+        var obj = JSON.parse(this.jsonStringObj);
+        console.log(obj.id);
+
+      }
+    );
+  }
+
+// var jsonStringObj = sessionStorage.getItem('object'); // This is the json string we stored
+
+// var obj = JSON.parse(jsonStringOBJ); // this is your object
+
+// console.log(obj.department); // access properties as usual
 
 }

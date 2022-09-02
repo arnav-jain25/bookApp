@@ -58,15 +58,15 @@ public class UserService {
 
     }
     
-    public Status findAllLoggedInUser(String email, String pwd) {
+    public User findAllLoggedInUser(String email, String pwd) {
     	System.out.println(email+" "+pwd);
     	User userFound = userRepository.findByEmailAndPwd(email,pwd).orElse(null);
         if (userFound!=null) {
         	userFound.setLoggedIn(true);
             userRepository.save(userFound);
-            return Status.SUCCESS; // Return userFound while integrating
+            return userFound; // Return userFound while integrating
         }
-        return Status.FAILURE;
+        return null;
     }
     
     public Status LogoutFunction(String email, String pwd) {

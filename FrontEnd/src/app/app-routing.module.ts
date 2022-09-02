@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'favourites', component: FavouritesComponent },
   { path: 'recommendations', component: RecommendationsComponent },
   { path: 'authors', component: AuthorsComponent },
-  { path: 'my-profile', component: MyProfileComponent }
+  { path: 'my-profile/:userId', component: MyProfileComponent }
 ];
 
 @NgModule({

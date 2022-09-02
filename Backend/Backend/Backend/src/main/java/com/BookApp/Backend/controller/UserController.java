@@ -61,7 +61,7 @@ public class UserController {
     }
     
     @PostMapping("/Users/login")
-    public Status UserLogin(@Validated @RequestBody Login userLogin) {
+    public User UserLogin(@Validated @RequestBody Login userLogin) {
     	//System.out.println(emailId+" "+pwd);
        return userService.findAllLoggedInUser(userLogin.getEmail(),userLogin.getPwd());
     }
