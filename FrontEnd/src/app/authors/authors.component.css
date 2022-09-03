@@ -58,3 +58,12 @@ body{
     background-image: -o-linear-gradient(180deg, rgb(202, 185, 32), transparent);
     background-image: linear-gradient(90deg, rgb(211, 100, 20), transparent);
 }
+
+/* ------------------------------ */
+ol li{
+    color: rgb(135, 20, 0);
+}
+
+ul li{
+    color: rgb(208, 56, 29)
+}

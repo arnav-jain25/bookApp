@@ -1,21 +1,21 @@
 <body>
     <app-navbar></app-navbar>
+
     <div class="divider"><span></span><span>Authors</span><span></span></div>
     <div class="container">
         <div class="row">
-            <ul *ngFor="let a of uniqueAuthor">
+            <ol *ngFor="let a of uniqueAuthor">
                 <li>{{a}}</li>
                 <div *ngFor="let book of bookData">
-                    <div *ngIf="a==book.aname">
-                        <li>
-                            {{book.bname}}
-                        </li>
-                    </div>
+                    <ul *ngIf="a==book.aname">
+                        <li>{{book.bname}}</li>
+                    </ul>
                 </div>
-            </ul>
+                <br>
+                <hr>
+            </ol>
         </div>
         <br>
-   
     </div>
     <br><br>
 

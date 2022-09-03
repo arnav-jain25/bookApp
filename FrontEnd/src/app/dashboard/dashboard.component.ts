@@ -51,19 +51,10 @@ export class DashboardComponent implements OnInit {
       author: 'dhfbgf',
       rating:5,
       isFav: false
-    },
-    {
-      title: 'dfsda',
-      author: 'dhfbgf',
-      rating:5,
-      isFav: false
     }
   ]
 
   auth: any[]=[
-    {
-      authorName: 'dfsda'
-    },
     {
       authorName: 'dfsda'
     },
