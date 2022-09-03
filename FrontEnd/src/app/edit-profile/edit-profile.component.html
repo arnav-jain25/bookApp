@@ -1,26 +1,36 @@
-<div class="container">
-    <form (ngSubmit)="onSubmit()">
+<body>
+    <app-navbar></app-navbar><br><br>
 
-        <label class="form-label" for="title">Name</label>
-        <input type="text" class="form-control" name="name" [(ngModel)]="user.name" >
+    <div class="container">
+        <div class="row">
+            <h1 style="color: rgb(81, 20, 20)">Edit Profile</h1>
+        </div>
+        <br>
+        <div class="container" id="editForm">
+            <form (ngSubmit)="onSubmit()">
 
-        <br>
-        <label class="form-label" for="id">Email ID</label>
-        <input type="email"  class="form-control" name="email"  [(ngModel)]="user.email">
-        <br>
-        <label class="form-label" for="copies">Password</label>
-        <input type="password" class="form-control" name="pwd"  [(ngModel)]="user.pwd">
-        <br>
-        <label class="form-label" for="copies">Phone Number</label>
-        <input type="tel"  class="form-control" name="phNo"  [(ngModel)]="user.phNo">
+                <label class="form-label" for="title">Name</label>
+                <input type="text" class="form-control" name="name" [(ngModel)]="user.name">
 
-        <br>
-        <br>
-        <button (click)="onSubmit()" class="btn btn-success">Update Profile</button>
+                <br>
+                <label class="form-label" for="id">Email ID</label>
+                <input type="email" class="form-control" name="email" [(ngModel)]="user.email">
+                <br>
+                <label class="form-label" for="copies">Password</label>
+                <input type="password" class="form-control" name="pwd" [(ngModel)]="user.pwd">
+                <br>
+                <label class="form-label" for="copies">Phone Number</label>
+                <input type="tel" class="form-control" name="phNo" [(ngModel)]="user.phNo">
 
-        <br>
-        {{user | json}}
+                <br>
+                <br>
+                <button (click)="onSubmit()" class="btnEdit">Update Profile</button>
+                <br>
+            </form>
+        </div>
+        <br><br>
 
-    </form>
+    </div>
 
-</div>
+    <app-footer></app-footer>
+</body>
