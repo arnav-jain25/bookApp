@@ -4,5 +4,7 @@ import { Users } from "./User";
 export class Favourites {
     "rating": string;
     "user":Users;
-    "book":Books;   
+    "book":Books; 
+    
+    
 }

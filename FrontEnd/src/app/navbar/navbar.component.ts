@@ -23,6 +23,10 @@ export class NavbarComponent implements OnInit {
   userId:number=0;
 
   ngOnInit(): void {
+
+    this.jsonStringObj = sessionStorage.getItem('user');
+    this.userId= JSON.parse(this.jsonStringObj).id;
+    
   }
 
   OnSubmit(){
@@ -44,10 +48,14 @@ export class NavbarComponent implements OnInit {
   }
 
   goToProfile(){
-    this.jsonStringObj = sessionStorage.getItem('user');
-    var obj = JSON.parse(this.jsonStringObj);
-    this.userId=obj.id;
+    
     console.log(this.userId);
     this.router.navigate(['my-profile',this.userId]);
+  }
+
+  goToFavourites(){
+    
+    console.log("user in go to fav func",this.userId);
+    this.router.navigate(['favourites/',this.userId]);
   }
 }

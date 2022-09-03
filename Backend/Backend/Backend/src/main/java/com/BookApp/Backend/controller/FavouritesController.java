@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +16,9 @@ import com.BookApp.Backend.model.Books;
 import com.BookApp.Backend.model.Favourites;
 import com.BookApp.Backend.service.FavouritesService;
 import com.BookApp.Backend.service.UserService;
+import com.BookApp.Backend.model.Status;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class FavouritesController {
 
@@ -43,7 +46,7 @@ public class FavouritesController {
 
 	
 	@DeleteMapping("/favourites/user/{uId}/books/{bId}")
-	public String DeleteFav(@PathVariable("uId") long userId,@PathVariable("bId") long bookId) {
+	public Status DeleteFav(@PathVariable("uId") long userId,@PathVariable("bId") long bookId) {
 		return favServ.deleteFromFavourite(userId, bookId);
 	}
 

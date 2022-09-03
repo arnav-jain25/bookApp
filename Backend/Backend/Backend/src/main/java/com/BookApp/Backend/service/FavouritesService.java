@@ -10,6 +10,7 @@ import com.BookApp.Backend.model.User;
 import com.BookApp.Backend.repository.BooksRepository;
 import com.BookApp.Backend.repository.FavouritesRepository;
 import com.BookApp.Backend.repository.UserRepository;
+import com.BookApp.Backend.model.Status;
 
 @Service
 public class FavouritesService {
@@ -28,20 +29,23 @@ public class FavouritesService {
 	public Favourites createFavourite(Favourites favourite, long userId, long bookId) {
 		User user = userRepo.findById(userId).get();
 		Books book = bookRepo.findById(bookId).get();
+		book.setFav(true);
 		favourite.setUser(user);
 		favourite.setBook(book);
 		return this.favRepo.save(favourite);
 	}
 
-	public String deleteFromFavourite(long userId, long bookId) {
+	public Status deleteFromFavourite(long userId, long bookId) {
 		Favourites fav=favRepo.findByUserIdAndBookId(userId, bookId).orElse(null);
+		Books book = bookRepo.findById(bookId).get();
 		System.out.println(fav);
 		if(fav!=null)
 		{
 			favRepo.deleteById(fav.getId());
-			return "Favourite Book deleted Successfully";
+			book.setFav(false);
+			return Status.SUCCESS;
 		}
-		return "Favourite Book not found";
+		return Status.FAILURE;
 	}
 
    

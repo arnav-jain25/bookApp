@@ -16,7 +16,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let book of bookData;">
+                    <tr *ngFor="let book of favBooks;">
                         <td>{{book.id}}</td>
                         <td>{{book.bname}}</td>
                         <td>{{book.aname}}</td>
@@ -24,8 +24,9 @@
                         <td>{{book.pname}}</td>
                         <td>{{book.lang}}</td>
                         <td>
-                            <button (click)="book.isFav=!book.isFav" style="border: 0px; background-color: bisque;">
-                                &nbsp;
+                            <!-- <button (click)="book.isFav=!book.isFav" style="border: 0px; background-color: bisque;"> -->
+                                <button (click)="deleteFromFavourites(book)" style="border: 0px; background-color: bisque;">
+                                <!-- &nbsp;
                                 <i class="bi-heart" *ngIf="book.isFav; then addFill else removeFill">
                                 </i> &nbsp;
                                 <ng-template #addFill>
@@ -33,7 +34,9 @@
                                 </ng-template>
                                 <ng-template #removeFill>
                                   <i class="bi-heart"></i>
-                                </ng-template>
+                                </ng-template> -->
+                                Delete From Favourite
+                                
                             </button>
                         </td>
                     </tr>

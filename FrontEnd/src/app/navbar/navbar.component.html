@@ -27,7 +27,10 @@
                     </a>
                 </li>&nbsp;&nbsp; -->
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink="/favourites">Favorites
+                    <!-- <a  class="nav-link active" aria-current="page" (click)="goToFavourites()"   routerLink="/favourites">Favorites
+                        <i class="bi-heart-fill"></i>
+                    </a> -->
+                    <a  class="nav-link active" aria-current="page" (click)="goToFavourites()" routerLink="/favourites/" >Favorites
                         <i class="bi-heart-fill"></i>
                     </a>
                 </li>&nbsp;&nbsp;
@@ -73,7 +76,7 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li><a class="dropdown-item" routerLink="/my-profile" (click)="goToProfile()">My Profile</a></li>
-                    <li><a class="dropdown-item" routerLink="/about">About XYZ</a></li>
+                    <li><a class="dropdown-item" routerLink="/about">About Us</a></li>
                     <li><a class="dropdown-item" routerLink="/" (click)="LogoutUser()">LogOut</a></li>
                 </ul>
             </div>

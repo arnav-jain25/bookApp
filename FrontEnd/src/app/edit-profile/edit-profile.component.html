@@ -1,24 +1,25 @@
 <div class="container">
-    <form #editUser="ngForm">
+    <form (ngSubmit)="onSubmit()">
 
-        <label for="title">Name</label>
-        <input type="text" name="title" id="title" [ngModel]="user.name">
+        <label class="form-label" for="title">Name</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="user.name" >
 
-        <label for="id">Email ID</label>
-        <input type="email" name="author" id="author" [ngModel]="user.email">
-
-        <label for="copies">Password</label>
-        <input type="password" name="copies" id="copies" [ngModel]="user.password">
-
-        <label for="copies">Phone Number</label>
-        <input type="password" name="copies" id="copies" [ngModel]="user.phone">
+        <br>
+        <label class="form-label" for="id">Email ID</label>
+        <input type="email"  class="form-control" name="email"  [(ngModel)]="user.email">
+        <br>
+        <label class="form-label" for="copies">Password</label>
+        <input type="password" class="form-control" name="pwd"  [(ngModel)]="user.pwd">
+        <br>
+        <label class="form-label" for="copies">Phone Number</label>
+        <input type="tel"  class="form-control" name="phNo"  [(ngModel)]="user.phNo">
 
         <br>
         <br>
-        <button  (click)="updateUser(editUser.value)" class="btn btn-success">Update Profile</button>
+        <button (click)="onSubmit()" class="btn btn-success">Update Profile</button>
 
         <br>
-        {{editUser.value | json}}
+        {{user | json}}
 
     </form>
 

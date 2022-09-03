@@ -48,6 +48,9 @@ public class Books {
     @Column(name = "Book_Img")
     private String bImage;
     
+    @Column(name = "Is_Fav")
+    private boolean isFav=false;
+    
     @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "book")
     private List<Favourites> favourite;

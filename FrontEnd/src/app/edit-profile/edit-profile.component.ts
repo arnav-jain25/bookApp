@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UserProfileDataService } from '../user-profile-data.service';
 import { UserProfile } from '../userProfileInterface';
+import { Users } from '../User';
+import { UserService } from '../user-service.service';
 
 @Component({
   selector: 'app-edit-profile',
@@ -10,23 +12,40 @@ import { UserProfile } from '../userProfileInterface';
 })
 export class EditProfileComponent implements OnInit {
 
-  user: UserProfile=new UserProfile()
+  // user: UserProfile=new UserProfile()
 
-  constructor(private route: ActivatedRoute, private userService: UserProfileDataService) { }
+  userId:number=0;
+  user: Users=new Users()
+
+  constructor(private userService: UserService,
+    private router: Router, private route:ActivatedRoute) { }
 
   ngOnInit(): void {
-    let obj = this.route.snapshot.paramMap.get('id');
-    let userId = obj != null ? parseInt(obj) : -1;
+    // let obj = this.route.snapshot.paramMap.get('id');
+    // let userId = obj != null ? parseInt(obj) : -1;
 
-    this.userService.getUserById(userId).subscribe(u => this.user = u);
+    // this.userService.getUserById(userId).subscribe(u => this.user = u);
+    this.getUserDetails();
   }
 
-  updateUser(person: UserProfile) {
-    console.log(person);
-    this.userService.editUser(person)
-      .subscribe(data => {
-        console.log('Data Updated Successfully');
-        window.location.href='/bms';
+  onSubmit(){
+    console.log("details updated");
+    this.updateUserDetails();
+  }
+
+  getUserDetails(){
+    this.userId=this.route.snapshot.params['userId']
+    return this.userService.getUserByIdAPI(this.userId).subscribe(data=>{
+      this.user=data;
+      console.log("Profile Data",data);
+    })
+  }
+
+  updateUserDetails() {
+   return this.userService.updateUserbyAPI(this.userId,this.user).
+      subscribe(data => {
+        console.log('User Data Updated Successfully');
+        this.router.navigate(['/my-profile',this.userId]);
       });
 
   }

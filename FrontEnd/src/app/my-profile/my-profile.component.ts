@@ -30,10 +30,9 @@ export class MyProfileComponent implements OnInit {
     this.getProfileDetails()
   }
 
-  editData(userObj: any) {
-    console.log('Edit Button clicked ' + userObj.userid);
-    let id = userObj.userid;
-    this.router.navigate(['my-profile/' + id]);
+  editData() {
+    console.log('Edit Button clicked ');
+    this.router.navigate(['edit-profile/' + this.userId]);
 
     //let bk = { "id": 1, "bTitle": "Tile", "bAuthor": "Author", "bCopies": 765423 }
     //this.bookService.editBook(bk).subscribe(bk => { this.ngOnInit() })
