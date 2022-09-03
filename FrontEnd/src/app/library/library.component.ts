@@ -15,7 +15,7 @@ export class LibraryComponent implements OnInit {
 
   bookData: Books[] = []
 
-
+  updatedBook : Books = new Books();
 
   jsonStringObj: any;
 
@@ -56,15 +56,30 @@ export class LibraryComponent implements OnInit {
       data => {
         console.log("favourite created", data)
         //navigate to favourite page of a user
-        //book.isFav = !book.isFav
+        book.isFav = true;
+        //this.updateBookFavouriteStatus(book)
     
-        this.router.navigate(['favourites/', this.userId]);
+        // this.router.navigate(['favourites/', this.userId]);
       }
     );
 
 
 
   }
+
+  // updateBookFavouriteStatus(book: Books){
+  //   return this.bookService.updateBookbyAPI(book.id,book).subscribe(
+  //     data => {
+        
+  //       console.log("updated status ", data);
+  //      this.updatedBook = data;
+  //      console.log("updated book ", this.updatedBook);
+       
+      
+    
+  //       // this.router.navigate(['favourites/', this.userId]);
+  //     })
+  // }
 
 
 

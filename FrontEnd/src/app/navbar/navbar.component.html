@@ -9,7 +9,7 @@
         <a class="navbar-brand" routerLink="/dashboard">
             <img src="favicon.ico" alt="" width="30" height="24">
         </a>
-        <a class="navbar-brand" routerLink="/dashboard">XYZ</a>
+        <a class="navbar-brand"  (click)="goToDashboard()" routerLink="/dashboard/">XYZ</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -17,7 +17,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink="/library">Library
+                    <a class="nav-link active" aria-current="page" (click)="goToLibrary()" routerLink="/library/">Library
                         <i class="bi-book-half"></i>
                     </a>
                 </li>&nbsp;&nbsp;
@@ -35,7 +35,7 @@
                     </a>
                 </li>&nbsp;&nbsp;
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink="/recommendations">Recommendations
+                    <a class="nav-link active" aria-current="page" (click)="goToRecommendation()"  routerLink="/recommendations/">Recommendations
                         <i class="bi-check-circle-fill"></i>
                     </a>
                 </li>&nbsp;&nbsp;

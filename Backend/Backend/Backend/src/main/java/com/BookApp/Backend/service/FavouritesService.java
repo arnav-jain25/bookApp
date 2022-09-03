@@ -29,10 +29,19 @@ public class FavouritesService {
 	public Favourites createFavourite(Favourites favourite, long userId, long bookId) {
 		User user = userRepo.findById(userId).get();
 		Books book = bookRepo.findById(bookId).get();
-		book.setFav(true);
-		favourite.setUser(user);
-		favourite.setBook(book);
-		return this.favRepo.save(favourite);
+		Favourites fav=favRepo.findByUserIdAndBookId(userId, bookId).orElse(null);
+		if(fav == null) {
+			book.setFav(true);
+			bookRepo.save(book);
+			
+			favourite.setUser(user);
+			favourite.setBook(book);
+			return this.favRepo.save(favourite);
+		}
+		else {
+			return favourite;
+		}
+		
 	}
 
 	public Status deleteFromFavourite(long userId, long bookId) {
@@ -43,6 +52,7 @@ public class FavouritesService {
 		{
 			favRepo.deleteById(fav.getId());
 			book.setFav(false);
+			bookRepo.save(book);
 			return Status.SUCCESS;
 		}
 		return Status.FAILURE;

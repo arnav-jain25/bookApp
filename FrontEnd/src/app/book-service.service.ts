@@ -31,4 +31,8 @@ export class BookServiceService {
   searchbookByBookNameAPI(keyword:String): Observable<Books[]> {
     return this.httpClient.get<Books[]>(`${this.dataUrl}/search/${keyword}`);
   }
+
+  updateBookbyAPI(bookId:number, book: Books): Observable<Books>{
+    return this.httpClient.put<Books>(`${this.dataUrl}/${bookId}`,book);
+  }
 }

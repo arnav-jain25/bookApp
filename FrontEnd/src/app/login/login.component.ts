@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../user-service.service';
 import { UserLogin } from '../UserLogin';
 
@@ -9,11 +10,13 @@ import { UserLogin } from '../UserLogin';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private userService:UserService) { }
+  constructor(private userService:UserService, private router: Router, private route: ActivatedRoute) { }
 
   userLogin:UserLogin=new UserLogin();
 
   jsonStringObj:any;
+
+  userId:number=0;
 
 
   ngOnInit(): void {
@@ -37,6 +40,14 @@ export class LoginComponent implements OnInit {
 
       }
     );
+  }
+
+  goToDashboard(){
+    
+    this.jsonStringObj = sessionStorage.getItem('user');
+    this.userId= JSON.parse(this.jsonStringObj).id;
+    console.log("user in go to fav func",this.userId);
+    this.router.navigate(['dashboard/',this.userId]);
   }
 
 // var jsonStringObj = sessionStorage.getItem('object'); // This is the json string we stored

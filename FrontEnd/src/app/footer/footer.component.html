@@ -4,14 +4,14 @@
         <div class="row">
             <div class="col">
                 <h6 class="hfooter">
-                    <a routerLink="" style="color: rgb(135, 20, 0);" class="btn" routerLink="/dashboard">Home
+                    <a routerLink="" style="color: rgb(135, 20, 0);" class="btn" (click)="goToDashboard()" routerLink="/dashboard/">Home
                         <i class="bi-house-fill"></i>
                     </a>
                 </h6>
             </div>
             <div class="col">
                 <h6 class="hfooter">
-                    <a routerLink="" style="color: rgb(135, 20, 0);" class="btn" routerLink="/library">Library
+                    <a routerLink="" style="color: rgb(135, 20, 0);" class="btn" (click)="goToLibrary()" routerLink="/library/">Library
                         <i class="bi-book-half"></i>
                     </a>
                 </h6>
@@ -27,7 +27,7 @@
 
             <div class="col">
                 <h6 class="hfooter">
-                    <a routerLink="" style="color: rgb(135, 20, 0);" class="btn" routerLink="/favourites">Favourites
+                    <a routerLink="" style="color: rgb(135, 20, 0);" class="btn" (click)="goToFavourites()" routerLink="/favourites/">Favourites
                         <i class="bi-heart-fill"></i>
                     </a>
                 </h6>
@@ -35,7 +35,7 @@
 
             <div class="col">
                 <h6 class="hfooter">
-                    <a routerLink="" style="color: rgb(135, 20, 0);" class="btn" routerLink="/recommendations">X Recommends
+                    <a routerLink="" style="color: rgb(135, 20, 0);" class="btn"  (click)="goToRecommendation()" routerLink="/recommendations/">X Recommends
                         <i class="bi-check-circle-fill"></i>
                     </a>
                 </h6>

@@ -58,4 +58,22 @@ export class NavbarComponent implements OnInit {
     console.log("user in go to fav func",this.userId);
     this.router.navigate(['favourites/',this.userId]);
   }
+
+  goToDashboard(){
+    
+    console.log("user in go to fav func",this.userId);
+    this.router.navigate(['dashboard/',this.userId]);
+  }
+
+  goToRecommendation(){
+    
+    console.log("user in go to fav func",this.userId);
+    this.router.navigate(['recommendations/',this.userId]);
+  }
+
+  goToLibrary(){
+    
+    console.log("user in go to fav func",this.userId);
+    this.router.navigate(['library/',this.userId]);
+  }
 }

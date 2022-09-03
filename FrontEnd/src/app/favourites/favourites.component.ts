@@ -19,6 +19,8 @@ export class FavouritesComponent implements OnInit {
 
   jsonStringObj: any;
 
+  updatedBook : Books = new Books();
+
   // userId: number = 0;
 
   // book: any;
@@ -57,6 +59,8 @@ export class FavouritesComponent implements OnInit {
     return this. favouriteService.removeFromFavourite(obj, book).subscribe(
       data => {
         console.log(data);
+        book.isFav = false;
+        //this.updateBookFavouriteStatus(book);
         this.getFavouriteDetails();
         
       }
@@ -65,6 +69,22 @@ export class FavouritesComponent implements OnInit {
 
 
   }
+
+
+  // updateBookFavouriteStatus(book: Books){
+  //   return this.bookService.updateBookbyAPI(book.id,book).subscribe(
+  //     data => {
+        
+  //       console.log("updated status for delete ", data);
+  //      this.updatedBook = data;
+  //      console.log("updated book for delete ", this.updatedBook);
+       
+      
+    
+  //       // this.router.navigate(['favourites/', this.userId]);
+  //     })
+  // }
+
 
  
 }

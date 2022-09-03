@@ -25,16 +25,8 @@
                         <td>{{book.lang}}</td>
                         <td>
                             <!-- <button (click)="book.isFav=!book.isFav" style="border: 0px; background-color: bisque;"> -->
-                                <button (click)="deleteFromFavourites(book)" style="border: 0px; background-color: bisque;">
-                                <!-- &nbsp;
-                                <i class="bi-heart" *ngIf="book.isFav; then addFill else removeFill">
-                                </i> &nbsp;
-                                <ng-template #addFill>
-                                  <i class="bi-heart-fill"></i>
-                                </ng-template>
-                                <ng-template #removeFill>
-                                  <i class="bi-heart"></i>
-                                </ng-template> -->
+                                <button (click)="deleteFromFavourites(book)" style="border: 1px solid black; background-color:transparent;">
+                               
                                 Delete From Favourite
                                 
                             </button>
