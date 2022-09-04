@@ -16,7 +16,7 @@
 ![image](https://user-images.githubusercontent.com/110247732/188312876-5b7f9973-79fe-43a5-8468-4e3b9f91d801.png)
 
 ## Library Page
-![image](https://user-images.githubusercontent.com/110247732/188312955-ef80604b-8e90-4223-8b08-dba98ee90d27.png)
+![image](https://user-images.githubusercontent.com/110247732/188313739-9149acbb-4cd1-4903-ab03-84402a71c126.png)
 
 ## Add to Favourites
 ![image](https://user-images.githubusercontent.com/110247732/188313021-e29bc878-2255-4fc0-8e9f-c66d7af035a8.png)
@@ -25,7 +25,7 @@
 ![image](https://user-images.githubusercontent.com/110247732/188313068-8c53984b-b3b1-4acb-82cd-99bc727c10cd.png)
 
 ## Recommendations Page
-![image](https://user-images.githubusercontent.com/110247732/188313107-f51f35cc-9a7a-43af-bd7d-6d501a80e856.png)
+![image](https://user-images.githubusercontent.com/110247732/188313759-55e99b46-23bc-4398-b452-1288d2c2c1d3.png)
 
 ## Author Page
 ![image](https://user-images.githubusercontent.com/110247732/188313198-9c825cb9-45e7-415d-9149-30dd05f56ab1.png)
@@ -48,12 +48,15 @@
 ## Backend DataBase
 
 1) Book DataBase
+
 ![image](https://user-images.githubusercontent.com/110247732/188313556-01b66849-e0c5-4f12-a415-ea2a73043dd3.png)
 
 2) Users DataBase
+
 ![image](https://user-images.githubusercontent.com/110247732/188313589-4ae72dfd-e7f7-4dd5-a8a5-fc439c6b42d1.png)
 
 3) Favourites DataBase
+
 ![image](https://user-images.githubusercontent.com/110247732/188313634-c590d095-17bc-4688-8697-b3344197f169.png)
 
 
