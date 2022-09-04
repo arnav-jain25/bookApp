@@ -7,20 +7,19 @@
         <div class="container" id="regForm">
             <h1>Register Now</h1>
             <br>
-            <form action="" (ngSubmit)="onSubmit()">
-                <label for="regName">Name - </label>
-                <input type="text" name="name" id="regName" class="form-control" placeholder="Ex: John Doe" [(ngModel)]="user.name">
+            <form  (ngSubmit)="onSubmit()" >
+                <label for="validationDefault01" >Name - </label>
+                <input type="text" name="name" id="validationDefault01" class="form-control" placeholder="Ex: John Doe" [(ngModel)]="user.name" required>
                 <label for="regEmail">Email ID - </label>
-                <input type="email" name="email" id="regEmail" class="form-control"
-                    placeholder="Ex: johhdoe@email.com" [(ngModel)]="user.email">
+                <input type="email" name="email" id="regEmail" class="form-control" placeholder="Ex: johhdoe@email.com" [(ngModel)]="user.email" required>
                 <label for="regPwd">Password - </label>
-                <input type="password" name="pwd" id="regPwd" class="form-control" placeholder="Ex: *************" [(ngModel)]="user.pwd">
+                <input type="password" name="pwd" id="regPwd" class="form-control" placeholder="Ex: *************" [(ngModel)]="user.pwd" required>
                 <!-- <label for="regDOB">Date of Birth - </label>
                 <input type="date" name="DOB" id="regDOB" class="form-control"> -->
                 <label for="regPhone">Phone No. - </label>
-                <input type="text" name="phNo" id="regPhone" class="form-control" placeholder="Ex: 1234567890" [(ngModel)]="user.phNo">
+                <input type="text" name="phNo" id="regPhone" class="form-control" placeholder="Ex: 1234567890" [(ngModel)]="user.phNo" required>
                 <br><br>
-                <input type="submit" value="Join Us Now!!" class="btnReg" routerLink="/login" (click)="onSubmit()"><br><br>
+                <input type="submit" value="Join Us Now!!" class="btnReg"  (click)="onSubmit()"><br><br>
             </form>
         </div>
         <br><br>

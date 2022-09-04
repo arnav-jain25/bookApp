@@ -58,14 +58,27 @@ export class DashboardComponent implements OnInit {
         //book.isFav = !book.isFav
     
       //  this.router.navigate(['favourites/', this.userId]);
+      alert("this book is addded to favourites");
       }
     );
 
 
 
   }
+
  
   
+  goToRecommendation(){
+    
+    console.log("user in go to fav func",this.userId);
+    this.router.navigate(['recommendations/',this.userId]);
+  }
+
+  goToLibrary(){
+    
+    console.log("user in go to fav func",this.userId);
+    this.router.navigate(['library/',this.userId]);
+  }
 
 
 

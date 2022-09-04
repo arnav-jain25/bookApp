@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Users } from '../User';
 import { UserService } from '../user-service.service';
  
@@ -11,7 +12,7 @@ export class RegistrationComponent implements OnInit {
  
   user:Users=new Users();
  
-  constructor(private UserService: UserService) { }
+  constructor(private UserService: UserService, private router: Router) { }
  
   ngOnInit(): void {
    
@@ -27,7 +28,8 @@ export class RegistrationComponent implements OnInit {
       (data:any) => {
         console.log('user created');
         console.log(data);
-        //this.redirectToDashboard();
+        this.router.navigate(['/login']);
+        
       }
     );
   }

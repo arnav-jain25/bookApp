@@ -104,18 +104,7 @@
                         <h6>Authors: {{books.aname}}</h6>
                         
     
-                        <a href=""><input type="button" value="Read More" class="readmore"></a>&nbsp;
-                        <button (click)="books.isFav=!books.isFav"
-                            style="border: 0px; background-color: transparent;">
-                            <i class="bi-heart" *ngIf="books.isFav; then addFill else removeFill">
-                            </i> &nbsp;
-                            <ng-template #addFill>
-                                <i class="bi-heart-fill"></i>
-                            </ng-template>
-                            <ng-template #removeFill>
-                                <i class="bi-heart"></i>
-                            </ng-template>
-                        </button>
+                       
                     </div>
                 </div>
             </div>

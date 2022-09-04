@@ -60,6 +60,7 @@ export class LibraryComponent implements OnInit {
         //this.updateBookFavouriteStatus(book)
     
         // this.router.navigate(['favourites/', this.userId]);
+        alert("this book is addded to favourites");
       }
     );
 

@@ -16,7 +16,7 @@
                 <label for="logPwd">Password - </label>
                 <input type="password" name="pwd" id="logPwd" class="form-control" placeholder="Ex: *************" [(ngModel)]="userLogin.pwd">
                 <br><br>
-                <input type="button" value="Log in Now!!" class="btnLog" (click)="goToDashboard()"  routerLink="/dashboard/" (click)="OnSubmit()"><br><br>
+                <input type="button" value="Log in Now!!" class="btnLog" (click)="goToDashboard()"   (click)="OnSubmit()"><br><br>
                 <a routerLink="/registration" style="color:rgb(81, 20, 20)">New User? Join Us Now!</a>
             </form>
         </div>

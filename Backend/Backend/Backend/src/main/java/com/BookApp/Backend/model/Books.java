@@ -54,11 +54,21 @@ public class Books {
     @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "book")
     private List<Favourites> favourite;
+
+	public Books(String bName, String aName, String pDate, String pName, String lang) {
+		super();
+		this.bName = bName;
+		this.aName = aName;
+		this.pDate = pDate;
+		this.pName = pName;
+		this.lang = lang;
+	}
     
 //    @ManyToOne(cascade = CascadeType.ALL)
 //    @JoinColumn(name="A_id")
 //    private Authors authors;
    
+    
     
 
 }
