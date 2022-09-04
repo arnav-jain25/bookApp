@@ -55,13 +55,14 @@ public class Books {
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "book")
     private List<Favourites> favourite;
 
-	public Books(String bName, String aName, String pDate, String pName, String lang) {
+	public Books(String bName,String bImg, String aName, String pDate, String pName, String lang) {
 		super();
 		this.bName = bName;
 		this.aName = aName;
 		this.pDate = pDate;
 		this.pName = pName;
 		this.lang = lang;
+		this.bImage=bImg;
 	}
     
 //    @ManyToOne(cascade = CascadeType.ALL)

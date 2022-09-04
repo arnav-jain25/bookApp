@@ -6,4 +6,5 @@ export class Books {
     "pname": string;
     "lang": string;
     "isFav": boolean;
+    "bimage":string;
 }

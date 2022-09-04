@@ -63,9 +63,6 @@ export class LibraryComponent implements OnInit {
         alert("this book is addded to favourites");
       }
     );
-
-
-
   }
 
   // updateBookFavouriteStatus(book: Books){

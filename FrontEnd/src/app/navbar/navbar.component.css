@@ -10,6 +10,19 @@ li a:hover {
     background-color: rgb(219, 169, 105);
 }
 
+.readmore{
+    background-color: rgb(208, 56, 29);
+    border: 2px solid rgb(208, 56, 29);
+    color: bisque;
+    border-radius: 5px;
+}
+
+.readmore:hover{
+    background-color: bisque;
+    border: 2px solid rgb(208, 56, 29);
+    color: rgb(139, 158, 14);
+    border-radius: 5px;
+}
 
 .divider {
     /* minor cosmetics */

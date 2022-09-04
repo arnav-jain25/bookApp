@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
         this.jsonStringObj = sessionStorage.getItem('user');
         var obj = JSON.parse(this.jsonStringObj);
         console.log(obj.id);
-
+        this.router.navigate(['dashboard/',obj.id]);
       }
     );
   }

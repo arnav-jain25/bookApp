@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BookServiceService } from '../book-service.service';
 import { Books } from '../bookInterface';
+import { FavoriteService } from '../favorites.service';
+import { Favourites } from '../Favourites';
+
 
 @Component({
   selector: 'app-navbar',
@@ -10,7 +13,7 @@ import { Books } from '../bookInterface';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private bookService:BookServiceService, private route:ActivatedRoute, private router:Router) { }
+  constructor(private favourtieService:FavoriteService, private bookService:BookServiceService, private route:ActivatedRoute, private router:Router) { }
 
   search:String='';
 
@@ -21,6 +24,8 @@ export class NavbarComponent implements OnInit {
   jsonStringObj:any;
 
   userId:number=0;
+
+  favourite: Favourites = new Favourites();
 
   ngOnInit(): void {
 
@@ -44,7 +49,29 @@ export class NavbarComponent implements OnInit {
   }
 
   LogoutUser(){
-    sessionStorage.removeItem("user")
+    sessionStorage.removeItem("user");
+  }
+  
+  addToFavourites(book: Books) {
+
+
+    //printing book id
+    console.log("book id:", book.id);
+
+    //get user from userId
+    this.jsonStringObj = sessionStorage.getItem('user');
+    var obj = JSON.parse(this.jsonStringObj);
+    this.userId = obj.id;
+    console.log("from library", this.userId);
+
+
+    //call service to create a fav entry
+    return this.favourtieService.createFavourite(this.favourite, obj, book).subscribe(
+      data => {
+        console.log("favourite created", data)
+      alert("this book is addded to favourites");
+      }
+    );
   }
 
   goToProfile(){

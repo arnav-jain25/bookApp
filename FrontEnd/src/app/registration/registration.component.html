@@ -7,7 +7,7 @@
         <div class="container" id="regForm">
             <h1>Register Now</h1>
             <br>
-            <form  (ngSubmit)="onSubmit()" >
+            <form #RegistrationForm="ngForm">
                 <label for="validationDefault01" >Name - </label>
                 <input type="text" name="name" id="validationDefault01" class="form-control" placeholder="Ex: John Doe" [(ngModel)]="user.name" required>
                 <label for="regEmail">Email ID - </label>
@@ -19,7 +19,7 @@
                 <label for="regPhone">Phone No. - </label>
                 <input type="text" name="phNo" id="regPhone" class="form-control" placeholder="Ex: 1234567890" [(ngModel)]="user.phNo" required>
                 <br><br>
-                <input type="submit" value="Join Us Now!!" class="btnReg"  (click)="onSubmit()"><br><br>
+                <input type="submit" value="Join Us Now!!" class="btnReg" [disabled]="!RegistrationForm.form.valid" (click)="onSubmit()"><br><br>
             </form>
         </div>
         <br><br>

@@ -4,8 +4,8 @@
     <div class="divider"><span></span><span>Authors</span><span></span></div>
     <div class="container">
         <div class="row">
-            <ol *ngFor="let a of uniqueAuthor">
-                <li>{{a}}</li>
+            <ol *ngFor="let a of uniqueAuthor; let i=index">
+                <h5>{{i+1}}. {{a}}</h5>
                 <div *ngFor="let book of bookData">
                     <ul *ngIf="a==book.aname">
                         <li>{{book.bname}}</li>

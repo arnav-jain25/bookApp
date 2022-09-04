@@ -3,19 +3,17 @@
   <app-navbar></app-navbar>
 
   <div class="container">
-    <!-- <h2 style="padding-bottom: 3%; padding-top: 3%;">- Library -</h2><br> -->
 
     <div class="divider"><span></span><span>Library</span><span></span></div>
     <div class="container-fluid mt-4">
       <div class="row justify-content-center">
         <div class="col-auto mb-3" *ngFor="let books of bookData; let i=index">
           <div *ngIf="i<3">
-            <div class="card card-rotating text-center" id="card-1"
-          
-            style="width: 18rem; background-color: rgb(148, 199, 195);  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);">
+            <div class="card"
+            style="width: 18rem; height: 25rem; background-color: #CDB6BA;  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4); margin-left: 34%;">
             <div class="card-body text-center">
               <div>
-                <img src="https://i.pinimg.com/originals/e7/08/69/e708697043f1a3b4d2d242c9f554f24e.jpg"
+                <img src={{books.bimage}}
                   style="width : 100px; height : 150px; border: 3.5px solid rgb(135, 20, 0);" class="card-img-top"
                   alt="...">
               </div>
@@ -23,16 +21,16 @@
               <h5 class="card-title text-center">{{books.bname}}</h5>
               <br>
               <h6>Authors: {{books.aname}}</h6>
-              
+              <p>Publisher Name: {{books.pname}}</p>
+              <p>Language: {{books.lang}}</p>   
 
               <a href="https://openlibrary.org/"><input type="button" value="Read More" class="readmore"></a>&nbsp;
               <button (click)="addToFavourites(books)" style="border: 1px solid black; background-color: transparent;">
-               Add to Favourite
+                Add to Favourite
               </button>
+              </div>
             </div>
           </div>
-          </div>
-
         </div>
       </div>
     </div>
@@ -43,19 +41,16 @@
 
     <br>
 
-
-
-    <!-- <h2 style="padding-bottom: 3%; padding-top: 3%;">- Recommendations -</h2> -->
-    <div class="divider"><span></span><span>Recommendations</span><span></span></div>
+<div class="divider"><span></span><span>Recommendations</span><span></span></div>
     <div class="container-fluid mt-4">
       <div class="row justify-content-center">
         <div class="col-auto mb-3" *ngFor="let books of bookData; let i=index">
-          <div *ngIf="i>bookData.length-3 && i<bookData.length">
+          <div *ngIf="i<6 && i>2">
             <div class="card"
-            style="width: 18rem; background-color: rgb(206, 206, 155);  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);">
+            style="width: 18rem; height: 25rem; background-color: #FFC1B6;  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);">
             <div class="card-body text-center">
               <div>
-                <img src="https://i.pinimg.com/originals/e7/08/69/e708697043f1a3b4d2d242c9f554f24e.jpg"
+                <img src={{books.bimage}}
                   style="width : 100px; height : 150px; border: 3.5px solid rgb(135, 20, 0);" class="card-img-top"
                   alt="...">
               </div>
@@ -63,17 +58,16 @@
               <h5 class="card-title text-center">{{books.bname}}</h5>
               <br>
               <h6>Authors: {{books.aname}}</h6>
-              
+              <p>Publisher Name: {{books.pname}}</p>
+              <p>Language: {{books.lang}}</p>              
 
               <a href="https://openlibrary.org/"><input type="button" value="Read More" class="readmore"></a>&nbsp;
               <button (click)="addToFavourites(books)" style="border: 1px solid black; background-color: transparent;">
                 Add to Favourite
               </button>
+              </div>
             </div>
           </div>
-
-          </div>
-
         </div>
       </div>
     </div>
@@ -84,8 +78,8 @@
     <br>
 
     <!-- <h2 style="padding-bottom: 3%; padding-top: 3%;">- Authors -</h2><br> <br> -->
-    <!-- <div class="divider"><span></span><span>Authors</span><span></span></div>
-    <div class="container-fluid mt-4">
+    <!-- <div class="divider"><span></span><span>Authors</span><span></span></div> -->
+    <!-- <div class="container-fluid mt-4">
       <div class="row justify-content-center">
         <div class="col-auto mb-3" *ngFor="let a of auth">
           <div class="card"

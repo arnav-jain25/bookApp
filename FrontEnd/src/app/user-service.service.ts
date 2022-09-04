@@ -27,4 +27,5 @@ export class UserService {
   updateUserbyAPI(UserId:number, user: Users): Observable<Users>{
     return this.httpClient.put<Users>(`${this.dataUrl}/${UserId}`,user);
   }
+
 }

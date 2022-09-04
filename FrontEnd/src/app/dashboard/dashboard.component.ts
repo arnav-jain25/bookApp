@@ -22,6 +22,8 @@ export class DashboardComponent implements OnInit {
 
   book: any;
 
+  len:number=this.bookData.length;
+
   favourite: Favourites = new Favourites();
 
   constructor(private favourtieService: FavoriteService,private bookService: BookServiceService, private route: ActivatedRoute, private router: Router) { }

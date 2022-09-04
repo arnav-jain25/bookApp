@@ -21,15 +21,7 @@
                         <i class="bi-book-half"></i>
                     </a>
                 </li>&nbsp;&nbsp;
-                <!-- <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink="/wishlist">Wish List
-                        <i class="bi-bookmark-check-fill"></i>
-                    </a>
-                </li>&nbsp;&nbsp; -->
                 <li class="nav-item">
-                    <!-- <a  class="nav-link active" aria-current="page" (click)="goToFavourites()"   routerLink="/favourites">Favorites
-                        <i class="bi-heart-fill"></i>
-                    </a> -->
                     <a  class="nav-link active" aria-current="page" (click)="goToFavourites()" routerLink="/favourites/" >Favorites
                         <i class="bi-heart-fill"></i>
                     </a>
@@ -52,23 +44,7 @@
                     <i class="bi-search"></i>
                 </button>
             </form>
-            <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class="bi-list"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" routerLink="#">Action</a></li>
-                        <li><a class="dropdown-item" routerLink="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" routerLink="#">Something else here</a></li>
-                    </ul>
-                </li>
-            </ul> -->
-
+           
             <div class="dropdown" style="padding-right: 10%;">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
                     data-bs-toggle="dropdown" aria-expanded="false" style="background-color: rgb(94, 17, 17);">
@@ -91,10 +67,10 @@
     <div class="container-fluid mt-4">
         <div class="row justify-content-center" >
             <div class="col-auto mb-3" *ngFor="let books of bookData">
-                <div class="card" style="width: 18rem; background-color: beige;  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);">
+                <div class="card" style="width: 18rem; height: 25rem; background-color: beige;  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);">
                     <div class="card-body text-center">
                         <div>
-                            <img src="https://i.pinimg.com/originals/e7/08/69/e708697043f1a3b4d2d242c9f554f24e.jpg"
+                            <img src={{books.bimage}}
                             style="width : 100px; height : 150px; border: 3.5px solid rgb(135, 20, 0);" class="card-img-top"
                             alt="...">
                         </div>
@@ -102,7 +78,13 @@
                         <h5 class="card-title text-center">{{books.bname}}</h5>
                         <br>
                         <h6>Authors: {{books.aname}}</h6>
-                        
+                        <p>Publisher Name: {{books.pname}}</p>
+                        <p>Language: {{books.lang}}</p>              
+
+                        <a href="https://openlibrary.org/"><input type="button" value="Read More" class="readmore"></a>&nbsp;
+                        <button (click)="addToFavourites(books)" style="border: 1px solid black; background-color: transparent;">
+                            Add to Favourite
+                        </button>
     
                        
                     </div>
